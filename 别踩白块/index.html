@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset=""UTF-8>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>别踩白块</title>
+        <link rel="stylesheet" href="css/Block.css">
+    </head>
+    <body>
+        <div class="main" id="main">
+            <div class="block_box" id="block_box"></div>
+            <div class="cover" id="cover">
+                <h1>别踩白块</h1>
+                <span id="start">开始</span>
+            </div>
+        </div>
+        <script src="js/Block.js"></script>
+        <script type="text/javascript">
+            var block_box=document.getElementById('block_box');
+            var block = new Block(block_box);
+            block.init();
+        </script>
+        <script>
+        var cover = document.getElementById('cover');
+        var start = document.getElementById('start');
+        start.onclick = function(){
+            block.start();
+            cover.style.display = 'none';
+        }
+        </script>
+    </body>
+</html>
